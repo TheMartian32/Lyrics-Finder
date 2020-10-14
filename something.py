@@ -41,9 +41,13 @@ def find_lyrics():
         Args:
             string_arg (str, optional): String that should be an artist or song. Defaults to str.
         """
+        # For every character in the string that was passed in
         for i in range(0, len(string_arg), 1):
+            # If the character its iterating through is a space, do the following
             if string_arg[i] == ' ':
+                # Replace the string at that index with a dash
                 string_arg = string_arg.replace(string_arg[i], '-')
+        # Return the newly formatted string
         return string_arg
 
     # Formats song and artist
